@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Mapa 1: MapLibre (OpenStreetMap) -->
+    <org.maplibre.android.maps.MapView
+        android:id="@+id/mapViewMapLibre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+
+    <!-- Mapa 2: Google Maps Nativo SDK -->
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapViewGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Mapa 3: Google Maps Web (HTML Assets) -->
+    <WebView
+        android:id="@+id/vistaMapaWeb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!-- Botón superior para alternar entre los mapas -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnToggleMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:text="Mapa: MapLibre (OSM)"
+        app:icon="@android:drawable/ic_menu_mapmode"
+        app:cornerRadius="20dp"
+        app:backgroundTint="#1976D2"
+        android:textColor="#FFFFFF" />
+
+    <!-- Botón flotante para geolocalización -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="24dp"
+        android:contentDescription="Mi Ubicación"
+        app:srcCompat="@android:drawable/ic_menu_mylocation"
+        app:backgroundTint="#FFFFFF"
+        app:tint="#1976D2" />
+
+</RelativeLayout>

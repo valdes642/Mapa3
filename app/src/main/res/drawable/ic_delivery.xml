@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Círculo de fondo naranja para repartidor -->
+    <path
+        android:fillColor="#E65100"
+        android:pathData="M24,0 A24,24 0 1,0 24,48 A24,24 0 1,0 24,0 Z" />
+    <!-- Silueta de moto/repartidor -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M15,32 A4,4 0 1,0 15,40 A4,4 0 1,0 15,32 Z M33,32 A4,4 0 1,0 33,40 A4,4 0 1,0 33,32 Z M10,26 L16,26 L22,16 L30,16 L32,22 L36,22 L36,26 L30,26 L28,32 L20,32 L18,28 L10,28 Z M28,12 L35,12 L35,18 L28,18 Z" />
+</vector>

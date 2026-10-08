@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Mapa de Google</title>
+  <style>
+    /* El contenedor del mapa ocupa toda la pantalla, ideal para celulares */
+    html, body, #map {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+  let map;
+
+  // Esta función se ejecuta automáticamente cuando la API de Google Maps se descarga
+  async function initMap() {
+    // Coordenadas de ejemplo (San Joaquín, Chile)
+    const position = { lat: -33.4989, lng: -70.6212 };
+
+    // Importar los módulos nativos de Google Maps
+    const { Map } = await google.maps.importLibrary("maps");
+    const { Marker } = await google.maps.importLibrary("marker");
+
+    // Crear e inicializar el mapa
+    map = new Map(document.getElementById("map"), {
+      zoom: 15,
+      center: position,
+      mapId: "DEMO_MAP_ID", // Requerido para el funcionamiento de marcadores modernos
+    });
+
+    // Añadir el marcador visual en las coordenadas indicadas
+    const marker = new Marker({
+      position: position,
+      map: map,
+      title: "San Joaquín - Punto de Evaluación",
+    });
+  }
+</script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBUG9D5GDbDWdkSQe04bNAqoi5YMQI4HY&callback=initMap"></script>
+
+</body>
+</html>
+

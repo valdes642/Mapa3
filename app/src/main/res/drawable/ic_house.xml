@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Círculo de fondo verde para la casa -->
+    <path
+        android:fillColor="#2E7D32"
+        android:pathData="M24,0 A24,24 0 1,0 24,48 A24,24 0 1,0 24,0 Z" />
+    <!-- Silueta de Casa blanca -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,10 L10,21 H14 V36 H20 V26 H28 V36 H34 V21 H38 Z" />
+</vector>
